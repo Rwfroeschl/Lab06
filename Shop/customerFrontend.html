@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link href="myStyle.css"
+		rel = "stylesheet"
+		type="text/css"/>
+	
+  
+  </head>
+  <body onload = 'document.form1.fusername.focus()'>
+  
+      
+ <main>
+    <div class="container"> 
+   <h1>Balls</h1>
+
+
+<div class = "login">
+	<form name = "form1" action="#">
+	<div class = "mail"> 
+		<label for = "fusername"> Username: </label>
+		<input type = text name = fusername> <br><br> 
+	</div>
+	</form>
+	<form name = "form2" onSubmit = "return matchPassword(this)">
+	<div class = "Password"> 
+		<label for = "fpassword"> Password: </label>
+		<input type = password name = fpassword> <br><br> 
+	</div>
+	<input type = submit name=submit value ="Confirm" onclick="ValidateEmail(document.form1.usernamef)"/>   <br><br>
+	</form>
+</div>
+   <div id="alerts"></div>
+<div class="productcont">
+        <div class="product">
+            <h3 class="productname">Tennis Ball</h3>
+            <p>Green Ball that you play tennis with</p>
+            <p class="price">$5</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+            <h3 class="productname">Lacrosse Ball</h3>
+            <p>White Ball that you can use to stretch or play lacrosse with</p>
+            <p class="price">$4</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+            <h3 class="productname">Pokemon Ball</h3>
+            <p>Red and white ball to catch your pokemon</p>
+            <p class="price">$20</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        </div>
+        <div class="cart-container">
+          <h2>Cart</h2>
+          <table>
+            <thead>
+              <tr>
+              <th><strong>Product</strong></th>
+              <th><strong>Price</strong></th>
+            </tr>
+            </thead>
+            <tbody id="carttable">
+            </tbody>
+          </table>
+          <hr>
+          <table id="carttotals">
+            <tr>
+              <td><strong>Items</strong></td>
+              <td><strong>Total</strong></td>
+            </tr>
+            <tr>
+              <td>x <span id="itemsquantity">0</span></td>
+             
+              <td>$<span id="total">0</span></td>
+            </tr></table>
+
+            
+          <div class="cart-buttons">  
+            <button id="emptycart">Empty Cart</button>
+            <button id="checkout">Checkout</button>
+          </div>
+        </div>
+</div>
+
+ </main>
+
+        <script  src="formChecker.js"></script> 
+  </body>
+</html>
