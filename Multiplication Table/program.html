@@ -1,0 +1,53 @@
+<html>
+
+	<head>
+	<title>Multiplication table </title>
+		<style type="text/css">
+		body {
+			font-size:14px;
+		}
+		
+		td {
+			height: 24px;
+			text-align: center;
+			width: 24px;
+		}
+		
+		td.gray {
+			background-color: blue;
+		}
+		
+		td.white {
+			background-color: lightblue;
+		}
+		
+		td a {
+			display: block;
+			text-decoration: none;
+		}
+		
+		td a:hover {
+			background-color: lightgray;
+		}
+		</style>
+	</head>
+
+	<body>
+
+		<table border="1">
+		<?php
+		for($r=1; $r <101; $r++)
+		{
+		echo"<tr>";
+			for($c=1;$c<101;$c++)
+			{
+			echo"<td class='$bg'><a href='#' title='$r x $c = ". $r * $c . "'>" . $r*$c . "</a></td>";
+			}
+		echo "</tr>";
+		}
+		?>
+		</table>
+
+	</body> 
+
+</html>
